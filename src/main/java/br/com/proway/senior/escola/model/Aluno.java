@@ -1,6 +1,6 @@
-package br.com.proway.senior.escola;
+package br.com.proway.senior.escola.model;
 
-import util.Verificacoes;
+import br.com.proway.senior.escola.util.Verificacoes;
 
 /**
  * pessoa estuda na escola

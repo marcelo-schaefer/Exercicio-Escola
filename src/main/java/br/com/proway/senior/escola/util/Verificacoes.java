@@ -1,4 +1,4 @@
-package util;
+package br.com.proway.senior.escola.util;
 
 public class Verificacoes {
 

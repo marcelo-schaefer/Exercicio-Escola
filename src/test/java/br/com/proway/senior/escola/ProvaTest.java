@@ -6,6 +6,10 @@ import static org.junit.Assert.assertNotNull;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import br.com.proway.senior.escola.model.Aluno;
+import br.com.proway.senior.escola.model.Materia;
+import br.com.proway.senior.escola.model.Prova;
+
 public class ProvaTest {
 
 	static Integer data = 202105;

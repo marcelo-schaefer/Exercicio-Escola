@@ -1,4 +1,4 @@
-package br.com.proway.senior.escola;
+package br.com.proway.senior.escola.model;
 
 /**
  * eh a avalicao de um aluno em uma materia.
@@ -15,10 +15,12 @@ package br.com.proway.senior.escola;
  */
 public class Prova {
 
+	private Integer id;
 	private Integer periudo;
 	private Aluno aluno;
 	private Materia materia;
-	private Double nota;
+	private Double nota = 0.0;
+	private Integer peso = 1;
 
 	/**
 	 * avalicação de desempenha do aluno
@@ -60,6 +62,22 @@ public class Prova {
 			throw new Exception("a nota esta abaixo de 0 ou acima de 10");
 		}
 		this.nota = notaEntra;
+	}
+
+	public Integer getPeso() {
+		return peso;
+	}
+
+	public void setPeso(Integer peso) {
+		this.peso = peso;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 }

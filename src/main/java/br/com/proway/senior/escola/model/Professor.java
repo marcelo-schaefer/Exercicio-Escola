@@ -1,4 +1,4 @@
-package br.com.proway.senior.escola;
+package br.com.proway.senior.escola.model;
 
 public class Professor {
 

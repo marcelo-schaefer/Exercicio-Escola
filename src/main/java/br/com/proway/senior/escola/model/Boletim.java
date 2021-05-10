@@ -1,7 +1,6 @@
-package br.com.proway.senior.escola;
+package br.com.proway.senior.escola.model;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 /**
  * reune as notas de um {@link Aluno}.
@@ -15,6 +14,7 @@ import java.util.Iterator;
  */
 public class Boletim {
 
+	private Integer id;
 	private Aluno aluno;
 	private Integer periudo;
 	private Double media;
@@ -37,6 +37,10 @@ public class Boletim {
 		this.provas = new ArrayList<Prova>();
 	}
 
+	public void setMedia(Double media) {
+		this.media = media;
+	}
+
 	public Aluno getAluno() {
 		return aluno;
 	}
@@ -46,33 +50,22 @@ public class Boletim {
 	}
 
 	public Double getMedia() {
-		this.calcularMedia();
 		return media;
 	}
 
-	private void calcularMedia() {
-
-		Double notas = 0.0;
-		for (Prova prova : provas) {
-			notas += prova.getNota();
-		}
-		this.media = notas / provas.size();
-	}
-
-	public void removeProva(int index) {
-		this.provas.remove(index);
-	}
-
-	public void removeTodasProva() {
-		this.provas = new ArrayList<Prova>();
-
-	}
-
 	public ArrayList<Prova> getProvas() {
-		return this.provas;
+		return provas;
 	}
 
-	public void addProva(Prova prova) {
-		this.provas.add(prova);
+	public void resetProva() {
+		this.provas = new ArrayList<Prova>();
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 }
